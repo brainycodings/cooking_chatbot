@@ -1,9 +1,5 @@
 require 'nokogiri'
 require 'open-uri'
-require 'http'
-require 'json'
-require 'dotenv/load'
-require_relative 'recette'
 
 def get_request
   puts "quelle recette désires-tu ?"
@@ -78,30 +74,4 @@ def get_instructions(doc)
     instructions
 end    
 
-
-
-
-
-search_url = get_request
-doc = scraping(search_url)
-plat = Recette.new(
-title: doc.at_css('h1')&.text&.strip,
-  ingredients: get_ingredients(doc),
-  utensils: get_utensils(doc),
-  steps: get_instructions(doc)
-)
-
-plat.display_recipee
-plat.generate_prompt
-
-
-
-
-
- system_prompt = plat.generate_prompt
-
-# messages = [
-#   { role: "system", content: system_prompt },
-#   { role: "assistant", content: "Prêt pour la première étape ?" }
-# ]
 

@@ -77,7 +77,7 @@ class Recette
         end
         prompt << ""
 
-        prompt << "Ton rôle : guider l'utilisateur étape par étape, répondre à ses questions, et adapter tes réponses à ce qu'il dit. Donne une seule instruction à la fois."
+        prompt << "Ton rôle : guider l'utilisateur étape par étape, répondre à ses questions, et adapter tes réponses à ce qu'il dit. Garde toujours le contexte de la conversation et tiens en compte. Donne une seule instruction à la fois et précise les quantité à chaque étape."
 
         prompt.join("\n")
     end
