@@ -26,7 +26,7 @@ A voice-enabled cooking assistant that helps users prepare meals by scraping top
 ## Technologies Used
 
 - **Ruby 3.4.2** — Main chatbot logic and flow.
-- **Nokogiri gem** Scraping**
+- **Nokogiri gem** Scraping
 - **Vosk** — Offline speech recognition.
 - **OpenAI API** — Natural language understanding and dynamic interaction.
 
